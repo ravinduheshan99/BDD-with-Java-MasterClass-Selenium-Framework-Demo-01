@@ -27,7 +27,12 @@ public class MainSteps {
         System.out.println("Cards are displayed");
     }
 
-    @When("User login into application with {string} and password {string} combination")
+//    @When("User login into application with {string} and password {string} combination")
+//    public void user_login_into_application_with_and_password_combination(String username, String password) {
+//        System.out.println("User login into application with "+username+ " and password "+password);
+//    }
+
+    @When("^User login into application with (.+) and password (.+) combination$")
     public void user_login_into_application_with_and_password_combination(String username, String password) {
         System.out.println("User login into application with "+username+ " and password "+password);
     }
