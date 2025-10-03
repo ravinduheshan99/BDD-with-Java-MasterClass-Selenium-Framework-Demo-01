@@ -1,5 +1,6 @@
 Feature: Application Login
 
+  @MobileTest
   Scenario: Admin Page default login
     Given User is on NetBanking landing page
     When User login into application with "admin" and password "1234"
@@ -8,6 +9,7 @@ Feature: Application Login
 
   #Reusable
 
+  @RegressionTest
   Scenario: User Page default login
     Given User is on NetBanking landing page
     When User login into application with "user" and password "5678"
@@ -20,7 +22,8 @@ Feature: Application Login
 #    Then Home Page is displayed
 #    And Cards are displayed
 
-  Scenario Outline: User Page default login
+  @SmokeTest @RegressionTest
+  Scenario Outline: Mortgage User Page default login
     Given User is on NetBanking landing page
     When User login into application with <Username> and password <Password> combination
     Then Home Page is displayed
@@ -32,6 +35,7 @@ Feature: Application Login
     | credituser | hello456 |
     | chequeuser | 123456   |
 
+  @SmokeTest
   Scenario: User Page default Sign up
     Given User is on Practice landing page
     When User Signup into application
