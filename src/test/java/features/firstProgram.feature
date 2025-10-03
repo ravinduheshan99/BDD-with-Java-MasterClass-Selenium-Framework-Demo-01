@@ -31,3 +31,13 @@ Feature: Application Login
     | debituser  | hello123 |
     | credituser | hello456 |
     | chequeuser | 123456   |
+
+  Scenario: User Page default Sign up
+    Given User is on Practice landing page
+    When User Signup into application
+    | Ravindu |
+    | Haputhanthri |
+    | ravinduheshan99@gmail.com |
+    | 0775165666 |
+    Then Home Page is displayed
+    And Cards are displayed

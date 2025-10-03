@@ -1,9 +1,10 @@
 package stepDefinitions;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import java.util.List;
 
 public class MainSteps {
 
@@ -35,6 +36,20 @@ public class MainSteps {
     @When("^User login into application with (.+) and password (.+) combination$")
     public void user_login_into_application_with_and_password_combination(String username, String password) {
         System.out.println("User login into application with "+username+ " and password "+password);
+    }
+
+    @Given("User is on Practice landing page")
+    public void user_is_on_practice_landing_page() {
+        System.out.println("User is on Practice landing page");
+    }
+
+    @When("User Signup into application")
+    public void user_signup_into_application(List<String> data) {
+        System.out.println(data.get(0));
+        System.out.println(data.get(1));
+        System.out.println(data.get(2));
+        System.out.println(data.get(3));
+
     }
 
 }
