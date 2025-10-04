@@ -8,6 +8,23 @@ import java.util.List;
 
 public class MainSteps {
 
+    @Given("Setup the entries in database")
+    public void setup_the_entries_in_database() {
+        System.out.println("*****************************");
+        System.out.println("Setup the entries in database");
+    }
+
+    @When("Launch the browser from config variables")
+    public void launch_the_browser_from_config_variables() {
+        System.out.println("Launch the browser from config variables");
+    }
+
+    @When("Hit the home page url of banking site")
+    public void hit_the_home_page_url_of_banking_site() {
+        System.out.println("Hit the home page url of banking site");
+    }
+
+
     @Given("User is on NetBanking landing page")
     public void user_is_on_net_banking_landing_page() {
         System.out.println("User is on NetBanking landing page");

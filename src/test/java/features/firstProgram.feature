@@ -1,6 +1,11 @@
 Feature: Application Login
 
-  @MobileTest
+  Background:
+    Given  Setup the entries in database
+    When Launch the browser from config variables
+    And Hit the home page url of banking site
+
+  @RegressionTest
   Scenario: Admin Page default login
     Given User is on NetBanking landing page
     When User login into application with "admin" and password "1234"
@@ -9,7 +14,7 @@ Feature: Application Login
 
   #Reusable
 
-  @RegressionTest
+  @MobileTest
   Scenario: User Page default login
     Given User is on NetBanking landing page
     When User login into application with "user" and password "5678"
